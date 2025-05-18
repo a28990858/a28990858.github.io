@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>小編推薦</title>
+	<style type="text/css" media="screen">
+		* {
+			box-sizing: border-box;
+			font-family: Courier, Microsoft JhengHei;
+		}
+
+		body {
+			height: 100%;
+			margin: 0px;
+			padding: 0px;
+			font-family: monospace, Microsoft JhengHei;
+
+		}
+
+		#logo {
+			flex: 1.5;
+			display: flex;
+			justify-content: center;
+
+		}
+
+		.img_logo {
+
+			width: 150px;
+		}
+
+		#menu {
+			background-color: #ffffff;
+			flex: 12;
+			text-align: center;
+		}
+
+		#menu ul {
+			display: flex;
+			list-style-type: none;
+			justify-content: space-around;
+
+		}
+
+		#menu ul li {
+			font-size: 48px;
+		}
+
+		a {
+			text-decoration: none;
+			color: black;
+		}
+
+		.small {
+			display: none;
+		}
+
+		.ellipsis {
+			/*超過自數換行*/
+			overflow: hidden;
+			/*隱藏*/
+			white-space: nowrap;
+			/*不換行*/
+			text-overflow: ellipsis;
+			/*省略...*/
+			display: -webkit-box;
+			-webkit-line-clamp: 8;
+			/*行數*/
+			-webkit-box-orient: vertical;
+			white-space: normal;
+
+
+		}
+
+		.box {
+			height: 300px;
+			margin: 5px 0px;
+		}
+
+		.bookphoto>h1 {
+			font-family: Courier, Microsoft JhengHei;
+
+		}
+
+		.bookphoto {
+			float: left;
+			width: 23%;
+			height: 95%;
+			transition: 0.8s;
+			margin: 0.5%;
+		}
+
+		.bookcontent {
+			float: left;
+			width: 65%;
+			height: auto;
+			padding: 0px 0px 0px 15px;
+			transition: 0.1s;
+		}
+
+		.hotbook {
+			font-size: 2.5vw;
+			text-align: center;
+			padding: 5px;
+			border-width: 1px;
+			border-top-style: solid;
+			border-bottom-style: solid;
+			border-color: #888888;
+		}
+
+		@media screen and (max-width: 1200px) {
+			.hotbook {
+				font-size: 24px;
+
+			}
+
+			#menu ul li {
+				font-size: 36px;
+			}
+
+			#menu ul li {
+				font-size: 36px;
+			}
+
+			.box {
+				height: 100%;
+				margin: 0px 0px;
+
+			}
+
+			.bookphoto {
+			
+				float: left;
+				width: 50%;
+				height: auto;
+				border: 1px #aaaaaa solid;
+				margin: 0% 25%;
+			}
+
+			.bookcontent {
+				float: left;
+				width: 97%;
+				height: auto;
+				padding: 0px 10px 10px 10px;
+			}
+
+			.big {
+				display: none;
+			}
+
+			.small {
+				display: block;
+			}
+		}
+
+		@media screen and (max-width: 600px) {
+			.bookphoto {
+				border: 0px #aaaaaa solid;
+
+			}
+			#menu ul li {
+        font-size: 24px;
+      }
+	  .hotbook {
+                font-size: 20px
+            }
+
+		}
+	</style>
+</head>
+
+<body>
+	<div class="one">
+		<div id="logo"><a href="index.html"><img class="img_logo" src="book.jpg" alt="book"></a>
+		</div>
+		<div id="menu">
+			<ul>
+				<li><a href="index.html">首頁</a></li>
+				<li><a href="edit.html">小編推薦</a></li>
+				<li><a href="news.html">最新書籍</a></li>
+				<li><a href="video.html">影片介紹</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="hotbook">
+		推薦書籍
+
+	</div>
+	<div class="box"><!-- style="height:300px;" -->
+
+		<div class="bookphoto"> <!-- style="float:left;width:30%;height:100%;border:1px black solid" -->
+			<img class="edit_photo" src="edit_photo/1.jpg" alt="" style="height:100% ;width: 100%;">
+		</div>
+
+		<div class="bookcontent"> <!-- style="float:left;width:65%;height:auto;padding:0px 0px 0px 15px;" -->
+			<h1>炮灰要向上</h1>
+			<p class="ellipsis">
+				18歲少女挑戰演技的奇幻快穿冒險劇！為了回到地球，請先穿越各個世界完成「任務」。
+
+				當靈魂意外獲得穿越時空的能力，
+				你會活出怎樣不同的人生？
+				歡迎來到這些由凡人創造的——小千世界。
+
+				18歲影后即將展開大好人生時，竟遭人陷害丟了小命，
+				不甘心的她，靈魂遊走不同世界並收集「天道之力」。
+				除了取代慘兮兮的原主活出新人生，
+				配合各世界的「潛規則」也不是件輕鬆活兒！
+
+				對一位熱愛演戲的影后來說，
+				演活古代角色不露馬腳完全沒難度，
+				誰料剛穿越便要成親，
+				要嫁的將軍還是個短命的⋯⋯
+
+				千萬個小世界，便有千萬個炮灰般的人生，
+				為了扭轉命運滿滿的套路，少女影后Power全開！</p>
+			<hr class="small">
+		</div>
+	</div>
+	<hr class="big">
+	<!-- 區隔 -->
+	<div class="box"> <!-- style="height:300px;margin:5px 0px" -->
+
+		<div class="bookphoto"> <!-- style="float:left;width:30%;height:100%;border:1px black solid" -->
+			<img class="edit_photo" src="edit_photo/2.jpg" alt="" style="height:100% ;width: 100%;">
+		</div>
+
+		<div class="bookcontent"><!--  style="float:left;width:65%;height:auto;padding:0px 0px 0px 15px;" -->
+			<h1>門主很忙</h1>
+			<p class="ellipsis">
+				魔功再現、江湖風雲變。
+				不靠譜的少女門主踏出家門，
+				高調跑任務，華麗入江湖！
+
+				武林第一大派玄天門，
+				四大堂主負責賺錢養家，門主大人負責貌美如花。
+				武力值趨於零的呆萌軟妹子，
+				要擔起門主重責，顯然得有不尋常的神祕屬性！？
+
+				魔功重現江湖，武林人心惶惶。
+				肉腳門主輕鬆接下尋找證人的請託，
+				帶著堂主們高調進行搜查兼購物之旅。
+
+				然而調皮證人大玩躲貓貓，
+				從不過問江湖事的少女VS性格欠揍的神祕青年，
+				一見面就風波不斷、相看兩厭，
+				保鏢兼保母的堂主頭痛表示：門主大人您別玩了！</p>
+			<hr class="small">
+		</div>
+	</div>
+	<hr class="big">
+	<!-- 區隔 -->
+	<div class="box"> <!-- style="height:300px;margin:5px 0px" -->
+
+		<div class="bookphoto"> <!-- style="float:left;width:30%;height:100%;border:1px black solid" -->
+			<img class="edit_photo" src="edit_photo/3.jpg" style="height:100% ;width: 100%;">
+		</div>
+
+		<div class="bookcontent"><!-- style="float:left;width:65%;height:auto;padding:0px 0px 0px 15px;" -->
+			<h1>夜之賢者</h1>
+			<p class="ellipsis">
+				南半球蝴蝶振翅，北半球刮颶風。如今蝴蝶搧動翅膀，少年與小蘿莉正太們的冒險，正式展開……少年小說家沈夜，意外穿越到異界，發現這個世界跟自己小說的悲慘設定一模一樣！？惹人憐愛小皇儲即將遭亂箭射死，正直皇兄因此心性大變；擁有魔法天賦的天才蘿莉就要成為奴隸，她的正太殺手哥哥墮入修羅道，展開黑暗的人生⋯⋯身為創造這一切的罪魁禍首，加上對萌娃們毫無抵抗力，小說家父愛大爆發，當場榮升年輕奶爸。憑著自身魅力與偷看過劇本的作弊能力，誓要轉變角色們悲慘的生命軌跡，重新「掰」出一條康莊大道！
+			</p>
+
+		</div>
+	</div>
+</body>
+
+</html>

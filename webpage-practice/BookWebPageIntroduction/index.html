@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> 首頁 </title>
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: Courier, Microsoft JhengHei;
+        }
+
+        body {
+            height: 100%;
+            margin: 0px;
+            padding: 0px;
+            font-family: monospace, Microsoft JhengHei;
+        }
+
+
+
+        #logo {
+            display: flex;
+            flex: 1.5;
+            justify-content: center;
+        }
+
+        .img_logo {
+            width: 150px;
+
+        }
+
+        #menu {
+            background-color: #ffffff;
+            flex: 12;
+            text-align: center;
+        }
+
+        #menu ul {
+            display: flex;
+            list-style-type: none;
+            justify-content: space-around;
+
+        }
+
+        #menu ul li {
+            font-size: 48px;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .content {
+            /*background-color:  #ddffff;*/
+            justify-content: space-between;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+
+        .cc {
+            position: relative;
+            /*相對於他的父物件*/
+            text-align: center;
+            width: 50vw;
+            height: 40vw;
+            border: 1.5px solid #ffffff;
+            transition: 0.3s;
+
+        }
+
+
+        .index_bookphoto {
+            width: 100%;
+            height: 100%;
+        }
+
+        /*.cc:hover{
+            border:2px #ffffff solid;
+            box-shadow: 1px 1px 15px 1px #333333;
+                }*/
+        .text {
+            /*display: flex;*/
+            position: absolute;
+            background-color: rgba(0, 0, 0, 0.8);
+            top: 0.1px;
+            left: 0.1px;
+            right: 0.1px;
+            bottom: 0.1px;
+            color: #ffffff;
+            flex-direction: column;
+            justify-content: center;
+            transform: scale(0) rotate(180deg);
+            transition: .5s cubic-bezier(.14, .41, .55, .41);
+            /*曲線流暢度 一個專門網站 可設定 https://cubic-bezier.com/*/
+            /*font-family:  cursive;*/
+            padding: 5px;
+        }
+
+        .cc:hover .text {
+            transform: scale(1);
+            opacity: 0.8;
+        }
+
+        .hotbook {
+            font-size: 2.5vw;
+            text-align: center;
+            padding: 5px;
+            border-width: 1px;
+            border-top-style: solid;
+            border-bottom-style: solid;
+            border-color: #888888;
+        }
+
+        #footer {
+
+            margin: 0px;
+            text-align: center;
+            font-size: 2vw;
+            padding: 5px;
+            border-width: 1px;
+            border-top-style: solid;
+            border-bottom-style: solid;
+            border-color: #888888;
+
+        }
+
+        #hint {
+            display: none;
+        }
+
+        @media screen and (max-width: 1200px) {
+            .hotbook {
+                font-size: 24px;
+
+            }
+
+            #menu ul li {
+                font-size: 36px;
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+            .body {
+                /*background-color: #88ff99;*/
+
+            }
+
+            .img_logo {
+                width: 150px;
+                text-align: center;
+
+            }
+
+            #menu ul li {
+        font-size: 24px;
+      }
+
+            #hint {
+                display: inline-flex;
+                position: fixed;
+                right: 5px;
+            }
+
+            .content {
+                flex-wrap: wrap;
+                flex-direction: column;
+            }
+
+            .cc {
+
+                height: 120vw;
+                width: 100vw;
+
+            }
+
+            .index_longphoto {
+                width: 100%;
+                height: 100%;
+
+            }
+
+            .text {
+                display: none;
+            }
+
+            .hotbook {
+                font-size: 20px
+            }
+
+            #footer {
+                font-size: 3vw;
+            }
+        }
+
+        .ellipsis {
+            /*超過自數換行*/
+            overflow: hidden;
+            /*內容會被修剪，但不會顯示捲軸，
+                當超出元素的範圍時隱藏內容。*/
+            white-space: nowrap;
+            /*不換行*/
+            text-overflow: ellipsis;
+            /*省略符號...*/
+            display: -webkit-box;
+            -webkit-line-clamp: 9;
+            /*行數*/
+            -webkit-box-orient: vertical;
+            /*box-orient框中的子元素從左向右進行顯示*/
+            /*vertical:从上向下垂直排列子元素。*/
+            white-space: normal;
+            /*white-space屬性設置如何處理元素內的空白。*/
+            /*空白會被瀏覽器忽略。*/
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="one">
+
+        <div id="logo"><a href="index.html"><img class="img_logo" src="book.jpg" alt="book"></a>
+        </div>
+        <div id="menu">
+            <ul>
+                <li><a href="index.html">首頁</a></li>
+                <li><a href="edit.html">小編推薦</a></li>
+                <li><a href="news.html">最新書籍</a></li>
+                <li><a href="video.html">影片介紹</a></li>
+            </ul>
+        </div>
+        <!--<div id="hint">視窗小於600px</div>-->
+    </div>
+
+    <div class="hotbook">
+        熱門書籍
+
+    </div>
+
+    <div class="content">
+        <div class="cc">
+            <img class="index_bookphoto" src="index_photo/book1.jpg" alt="">
+            <div class="text">
+                <p style="font-size: 3vw">大仙術士李白</p>
+                <p class="ellipsis" style="font-size: 2vw">
+                    大唐開元四年，一個璀璨輝煌的盛世！在這仙術至上的世界中，一位閃耀著無上光芒的少年即將大展身手！李白自幼拜入仙術士「焦煉師」門下，15歲時已是能獨當一面的仙術師。為了完成父親未能完成的心願，李白立志要進入翰林院，成為大仙術士！但在這仙術師多如過江之鯽的時代，縱使天資過人，庶民出身的李白果真能夠順利成為國家仙術士嗎？
+
+                </p>
+            </div>
+        </div>
+        <div class="cc">
+            <img class="index_bookphoto" src="index_photo/book2.jpg" alt="">
+            <div class="text">
+                <p style="font-size: 3vw">倒數七天</p>
+                <p class="ellipsis" style="font-size: 2vw">
+                    天界實驗發出的死亡通知，僅有短短七天，無論你曾經活在世界的頂端，或是掙扎在生命的邊緣，心中總有牽絆、總有掛念、總有遺憾……生與死，是每個人必經的課題──怎麼死，其實不重要；怎麼活，才是重點。
+                </p>
+            </div>
+        </div>
+        <div class="cc">
+            <img class="index_bookphoto" src="index_photo/book3.jpg" alt="">
+            <div class="text">
+                <p style="font-size: 3vw">羊與鋼之森</p>
+                <p class="ellipsis" style="font-size: 2vw">
+                    並非天才，卻是努力的專家；沒有天分，卻是練習的達人！盡己所能，用盡全力──盡最大的努力，為人生打磨最好的「自己」！努力永遠不會辜負你！以北國風光為舞臺，述說不會彈鋼琴的新手調音師的煩惱──才能是否必要，努力是否必要，工作到底是為了誰？
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        <div class="cc">
+            <img class="index_bookphoto" src="index_photo/book4.jpg" alt="">
+            <div class="text">
+                <p style="font-size: 3vw">小書痴的下剋上</p>
+                <p class="ellipsis" style="font-size: 2vw">
+                    從小就是個超級書痴的女大學生麗乃，愛書愛到希望在書堆裡死去。該說是「夢想成真」嗎？好不容易應徵上圖書館工作的她，沒想到卻在地震時被掉落的書給活埋……
+
+                </p>
+            </div>
+        </div>
+        <div class="cc">
+            <img class="index_bookphoto" src="index_photo/book5.jpg" alt="">
+            <div class="text">
+                <p style="font-size: 3vw">天氣之子</p>
+                <p class="ellipsis" style="font-size: 2vw">這是──
+                    只有我和她才知道的，
+                    關於這個世界的祕密。
+
+                    高一夏天，帆高自故鄉離島離家出走，來到東京。
+                    但獨立生活的夢想很快於現實中破滅，
+                    東京連日的大雨，也彷彿象徵帆高晦暗的未來。
+
+                    在困頓的生活中，帆高於人潮擁擠的都會一角，
+                    邂逅與弟弟相依為命的不可思議少女──陽菜。
+                    「馬上就會放晴了喔。」
+                    廢棄大樓雜草叢生的屋頂上，在陽菜這句話之後，
+                    烏雲散去、陽光灑落，
+                    灰色的世界恢復了鮮豔色彩……
+
+                    在氣候異常的時代，被命運捉弄的少年少女，
+                    如何「選擇」自己的生活？
+                </p>
+            </div>
+        </div>
+        <div class="cc">
+            <img class="index_bookphoto" src="index_photo/book6.jpg" alt="">
+            <div class="text">
+                <p style="font-size: 3vw">張公案</p>
+                <p class="ellipsis" style="font-size: 2vw">京城清明，未得細雨。
+                    來自各地的試子紛紛赴京，準備參與科考，但來自西川的窮書生張屏還未進入試場，卻捲入了一樁戲班的謀殺案。一本與案情若合符節的新作戲本，牽扯出多年前黃大仙作祟的未解懸案，身為嫌疑人，張屏要如何透過蛛絲馬跡證明自己的清白？
+
+
+
+                    宦海浮沉，木訥少言的張屏與八面玲瓏的禮部侍郎蘭珏相遇，這場從窮書生一路向上的斷案生涯，又會面臨何種考驗？時代的大風即將颳起，儘管出身如野草，最終也將成為心正不怕影斜的棟梁。
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        <div class="cc">
+            <img class="index_bookphoto" src="index_photo/book7.jpg" alt="">
+            <div class="text">
+                <p style="font-size: 3vw">迷途之羊</p>
+                <p class="ellipsis" style="font-size: 2vw">這個世界如此矛盾，卻也因此，我們才如此著迷。「不論哪一條路，都是妳自己做的決定，
+                    都是真正的妳！」當真相揭穿，橫亙在男孩與女孩之間的問題，再也不容逃避──
+                    讓兩人分開的從來不是距離，而是在不知不覺中，漸行漸遠的心。白宣，空靈、縹緲神祕的女孩，想要找到真實的自己；柳透光，堅定、不願放棄的男孩，最終發現相聚之前必須分離。因迷途而錯身的他們，何時才能再將彼此的手牽起？
+
+                </p>
+            </div>
+        </div>
+        <div class="cc">
+            <img class="index_bookphoto" src="index_photo/book8.jpg" alt="">
+            <div class="text">
+                <p style="font-size: 3vw">鯨之海</p>
+                <p class="ellipsis" style="font-size: 2vw">
+                    從幾十公斤變成幾百公噸，從兩條腿變成一條尾巴，從陸生哺乳類變成海洋哺乳類……莫名變成一條藍鯨的三胖有些哀傷，這麼胖，該怎麼找老婆？好在天公疼憨鯨，命運早已為他準備好相守一生的伴侶，一隻大白鯊。
+                </p>
+            </div>
+        </div>
+        <div class="cc">
+            <img class="index_bookphoto" src="index_photo/book9.jpg" alt="">
+            <div class="text">
+                <p style="font-size: 3vw">殤九歌</p>
+                <p class="ellipsis" style="font-size: 2vw">
+                    大樹傾倒、動物竄逃，溪水飄著惡臭汙穢，山林間，悲鳴聲聲迴盪，被驚醒的黑影，睜開怒紅的雙眼……幾樁命案讓大學提早放假，但姜子牙可一點都開心不起來，以人命為代價的假期，任誰都不想要！為了彌補遺憾，姜子牙決定整個假期都跟著路揚斬妖除魔，拉上反正不敢靠近其他人的林芝香，斬妖除魔小組不正式成立！
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer">WebDesign:畢琬妮</div>
+</body>
+
+</html>

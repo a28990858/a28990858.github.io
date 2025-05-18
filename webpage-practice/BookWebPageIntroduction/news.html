@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>最新書籍</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: Courier, Microsoft JhengHei;
+    }
+
+    body {
+      height: 100%;
+      margin: 0px;
+      padding: 0px;
+    }
+
+
+    #logo {
+      display: flex;
+      flex: 1.5;
+      justify-content: center;
+    }
+
+    .img_logo {
+      width: 150px;
+    }
+
+    #menu {
+      background-color: #ffffff;
+      flex: 12;
+      text-align: center;
+
+    }
+
+    #menu ul {
+      display: flex;
+      list-style-type: none;
+      justify-content: space-around;
+
+
+    }
+
+    #menu ul li {
+      font-size: 48px;
+    }
+
+
+
+    .header {
+      text-align: center;
+      padding: 0px;
+    }
+
+    a {
+      text-decoration: none;
+      color: black;
+    }
+
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 0 4px;
+    }
+
+    /* Create four equal columns that sits next to each other */
+    .column {
+      flex: 25%;
+      max-width: 25%;
+      padding: 0 4px;
+    }
+
+    .column img {
+      margin-top: 8px;
+      vertical-align: middle;
+    }
+
+    .hotbook {
+      font-size: 2.5vw;
+      text-align: center;
+      padding: 5px;
+      border-width: 1px;
+      border-top-style: solid;
+      border-bottom-style: solid;
+      border-color: #888888;
+    }
+
+    /* Responsive layout - makes a two column-layout instead of four columns */
+    @media screen and (max-width: 1200px) {
+      .hotbook {
+        font-size: 24px;
+
+      }
+
+      #menu ul li {
+        font-size: 36px;
+      }
+    }
+
+
+    /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+    @media screen and (max-width: 600px) {
+      .column {
+        flex: 50%;
+        max-width: 50%;
+      }
+
+      #menu ul li {
+        font-size: 24px;
+      }
+
+      .hotbook {
+                font-size: 20px
+            }
+
+      .column {
+        flex: 100%;
+        max-width: 100%;
+      }
+
+    }
+
+    .new_photo {
+      border: 1px black solid;
+      border-radius: 1%;
+    }
+  </style>
+
+<body>
+
+  <!-- Header -->
+  <div class="header">
+    <div id="logo"><a href="index.html"><img class="img_logo" src="book.jpg" alt="book"></a>
+    </div>
+    <div id="menu">
+      <ul>
+        <li><a href="index.html">首頁</a></li>
+        <li><a href="edit.html">小編推薦</a></li>
+        <li><a href="news.html">最新書籍</a></li>
+        <li><a href="video.html">影片介紹</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="hotbook">
+    新書上市
+
+  </div>
+  <!-- Photo Grid -->
+  <div class="row">
+    <div class="column">
+      <img class="new_photo" src="new_photo/book1.jpg" style="width:100%">
+      <img class="new_photo" src="new_photo/book2.jpg" style="width:100%">
+    </div>
+
+    <div class="column">
+      <img class="new_photo" src="new_photo/book3.jpg" style="width:100%">
+      <img class="new_photo" src="new_photo/book4.jpg" style="width:100%">
+    </div>
+
+    <div class="column">
+      <img class="new_photo" src="new_photo/book5.jpg" style="width:100%">
+      <img class="new_photo" src="new_photo/book6.jpg" style="width:100%">
+    </div>
+    <div class="column">
+      <img class="new_photo" src="new_photo/book7.jpg" style="width:100%">
+      <img class="new_photo" src="new_photo/book8.jpg" style="width:100%">
+    </div>
+  </div>
+
+</body>
+
+</html>

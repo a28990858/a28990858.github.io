@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>影片介紹</title>
+	<style>
+		body {
+			height: 100%;
+			margin: 0px;
+			padding: 0px;
+			font-family: Courier, Microsoft JhengHei;
+		}
+
+		#logo {
+			display: flex;
+			flex: 1.5;
+			justify-content: center;
+
+		}
+
+		.img_logo {
+			width: 150px;
+		}
+
+		#menu {
+			background-color: #ffffff;
+			flex: 12;
+			text-align: center;
+
+		}
+
+		#menu ul {
+			display: flex;
+			list-style-type: none;
+			justify-content: space-around;
+
+
+		}
+
+		#menu ul li {
+			font-size: 48px;
+		}
+
+
+
+		.header {
+			text-align: center;
+			padding: 0px;
+		}
+
+		a {
+			text-decoration: none;
+			color: black;
+		}
+
+		.ellipsis {
+			/*超過自數換行*/
+			overflow: hidden;
+			/*隱藏*/
+			white-space: nowrap;
+			/*不換行*/
+			text-overflow: ellipsis;
+			/*省略...*/
+			display: -webkit-box;
+			-webkit-line-clamp: 13;
+			/*行數*/
+			-webkit-box-orient: vertical;
+			white-space: normal;
+
+
+		}
+
+		.hotbook {
+			font-size: 2.5vw;
+			text-align: center;
+			padding: 5px;
+			border-width: 1px;
+			border-top-style: solid;
+			border-bottom-style: solid;
+			border-color: #888888;
+		}
+
+		@media screen and (max-width: 1200px) {
+			.hotbook {
+				font-size: 24px;
+
+			}
+
+			#menu ul li {
+				font-size: 36px;
+			}
+
+			.column {
+				flex: 50%;
+				max-width: 50%;
+			}
+
+			#menu ul li {
+        font-size: 24px;
+      }
+
+	  .hotbook {
+                font-size: 20px
+            }
+
+			.column {
+				flex: 100%;
+				max-width: 100%;
+			}
+
+		}
+
+		.new_photo {
+			border: 1px black solid;
+			border-radius: 1%;
+		}
+	</style>
+</head>
+
+<body>
+
+	<div class="header">
+		<div id="logo"><a href="index.html"><img class="img_logo" src="book.jpg" alt="book"></a>
+		</div>
+		<div id="menu">
+			<ul>
+				<li><a href="index.html">首頁</a></li>
+				<li><a href="edit.html">小編推薦</a></li>
+				<li><a href="news.html">最新書籍</a></li>
+				<li><a href="video.html">影片介紹</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="hotbook">
+		新書影片介紹
+
+	</div>
+	<div class="box" style="padding: 0% 1%;width: 1200px height:800px;/*background-color:#fff777*/;">
+
+		<iframe style="background-color:#fffff;float:left;width:50%;height:400px;padding:0.1%;margin:5px 0px;"
+			src="https://www.youtube.com/embed/s3cenBQYaJI" frameborder="0"
+			allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+		<div class="box01"
+			style="float:left;border:1px #000000 solid;width:45%;height:399px;padding:0px 2%;margin:5px 0px;/*background-color: #77ffff/">
+			<h1>大仙術士李白</h1>
+			<P class="ellipsis">
+				大唐開元四年，一個璀璨輝煌的盛世！在這仙術至上的世界中，一位閃耀著無上光芒的少年即將大展身手！李白自幼拜入仙術士「焦煉師」門下，15歲時已是能獨當一面的仙術師。為了完成父親未能完成的心願，李白立志要進入翰林院，成為大仙術士！但在這仙術師多如過江之鯽的時代，縱使天資過人，庶民出身的李白果真能夠順利成為國家仙術士嗎？<br>
+				本書特色<br>★FORCE人氣連載作品！<br>★金漫獎最佳少年漫畫得獎作《無上西天》作者葉明軒最新作！<br>★以唐代著名詩人為主角，帶有東方色彩的奇幻作品正式登場！</P>
+		</div>
+
+		<iframe style="background-color:#fffff; float:left;width:50%;height:400px;padding:0.1%;margin:5px 0px;"
+			src="https://www.youtube.com/embed/CGsMvXo61d8" frameborder="0"
+			allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		<div class="box01"
+			style="float:left;border:1px #000000 solid;width:45%;height:399px;padding:0px 2%;margin:5px 0px;/*background-color: #77ffff/">
+			<h1>倒數七天</h1>
+			<P class="ellipsis">天界實驗發出的死亡通知<br>
+				僅有短短七天，<br>
+				無論你曾經活在世界的頂端，<br>
+				或是掙扎在生命的邊緣，<br>
+				心中總有牽絆、總有掛念、總有遺憾……<br>
+				生與死，<br>
+				是每個人必經的課題──<br>
+				怎麼死，<br>
+				其實不重要；<br>
+				怎麼活，<br>
+				才是重點。</P>
+		</div>
+		<iframe style="background-color:#fffff; float:left;width:50%;height:400px;padding:0.1%;margin:5px 0px;"
+			src="https://www.youtube.com/embed/JnMKwuwxeKM" frameborder="0"
+			allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		<div class="box01"
+			style="float:left;border:1px #000000 solid;width:45%;height:399px;padding:0px 2%;margin:5px 0px;/*background-color: #77ffff/">
+			<h1 style="white-space: nowrap;font-size: :100%">小書痴的下剋上</h1>
+			<P class="ellipsis">
+				從小就是個超級書痴的女大學生麗乃，愛書愛到希望在書堆裡死去。該說是「夢想成真」嗎？好不容易應徵上圖書館工作的她，沒想到卻在地震時被掉落的書給活埋……<br>當她再度醒過來，發現自己竟然轉生到了陌生的異世界，變成名叫梅茵的五歲小女孩，不但生在貧窮的士兵家，而且還體弱多病，但最讓她難以接受的是，這個世界完全找不到任何書店或圖書館，就算想看書，也是一般平民根本買不起的天價！<br>於是梅茵下定決心：「既然買不到書，那我就自己動手做！」憑藉著對書的滿腔熱情，目標是成為圖書管理員。為了在異世界也能過著被書環繞的美好生活，就從做書開始努力吧！
+			</P>
+		</div>
+		<div>
+
+
+</body>
+
+</html>
