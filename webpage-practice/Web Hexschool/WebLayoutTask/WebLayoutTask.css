@@ -1,0 +1,226 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+
+/* CSS樣式 */
+body{
+    font-family:  Roboto,Noto Sans ;
+}
+p{
+    font-size: 24px;
+    line-height: 36px;
+}
+.container{
+	margin: 0 auto;
+    width: 1200px;
+}
+
+.mb-3{
+	margin-bottom: 24px;
+}
+
+/* .subheading{
+	 display: flex;
+	 align-items:center; 
+	
+} */
+.subheading{
+	font-size:32px ;
+	line-height:45px;
+	border-bottom: 1px solid black;
+	margin-bottom: 16px;
+}
+.subheading span{
+	font-size: 24px;
+	padding-left: 16px;
+	padding-bottom: 8px;
+	line-height:28px;
+	color: brown;
+}
+
+/* block1 intro*/
+.block1 .introContent{
+    padding-bottom: 48px;
+}
+
+ h1{
+    font-size: 80px;
+    line-height: 94px;
+    
+}
+/* h1{
+	一個網頁的h1只有一個
+    border-top-width: 2px;
+    使用在盒模型上的語法
+} */
+.introContentPhoto img{
+    width: 324px;
+	margin: 48px 0;
+}
+
+
+
+
+.profileContent{
+	margin-bottom: 15px;
+}
+
+/* block2 skills*/
+.block2{
+	background-color: #415165;
+	padding: 1px 0;
+}
+.block2 .introContent{
+    padding: 24px 0px 36px 0;
+}
+.skills {
+	margin: 0 auto;
+	width: 996px;
+	/* background-color: darkcyan; */
+}
+.skills .subheading {
+	text-align: center;
+	border-bottom:1px solid  white;
+	
+}
+.skills .subheading,.skills .subheading span{
+	color: white;
+	
+}
+.skills .skillsContent{
+	border-left:  #96A9C4 solid 1px ;
+	margin-left: 40%;
+	margin-top: 40px;
+}
+
+.skills .skillsContent p{
+	color: white;
+	margin-left: 18px;
+	font-weight: normal;
+	font-size: 24px;
+	line-height: 2;
+}
+
+
+
+.skills .introContent hr{
+	border-color: rgb(178, 178, 184);
+}
+
+/* block3 workExperience*/
+.block3 .introContent{
+    padding: 72px 0 72px 0;
+}
+
+.workExperience .wrokExperienceContent{
+	border-left:  rgb(178, 178, 184) solid 1px;
+	margin-top: 18px;
+	margin-left: 20px;
+}
+
+.workExperience .wrokExperienceContent li{
+	margin-left: 18px;
+	margin-bottom: 24px;
+	font-size: 24px;
+}
+.workExperience .wrokExperienceContent img{
+	width: 90px;
+	margin: 10px 0 5px 0;
+	margin-left: 5px;
+}
+
+.wrokExperienceContent span{
+	display: block;
+	width: 642px;
+	font-size: 20px;
+	line-height:30px;
+}
+
+/* block4 contact*/
+.block4{
+	background-color: #415165;
+	
+}
+.block4 .introContent{
+    padding: 30px  0;
+}
+.contact .subheading{
+	border-bottom:1px solid  white;
+	margin-bottom: 16px;
+	text-align: center;
+	color: white;
+}
+
+.contact .subheading span{
+	color: white;
+}
+.contact ul {
+	margin-top: 32px;
+	text-align: center;
+	color: white;
+	font-weight: normal;
+	font-size: 24px;
+}
+.contact li{
+	margin-bottom: 16px;
+}
+.contact a{
+	color: white;
+	text-decoration:none;
+}
+.contactSocial{
+	display: flex;
+	justify-content: center
+	
+}
+.contactSocial img{
+	width: 48px;
+	margin: 15px 5px 0 5px;
+}
